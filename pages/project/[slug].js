@@ -6,8 +6,6 @@ import {getAllProjectsWithSlug, getProjectBySlug, getMainMenu } from '../../lib/
 const Project = ({project, menuItems}) => {
   const router = useRouter();
 
-  console.log(project)
-
   if (!router.isFallback && !project?.slug) {
    return <ErrorPage statusCode={404} />
  }
