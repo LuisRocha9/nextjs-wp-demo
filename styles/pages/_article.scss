@@ -1,0 +1,32 @@
+.article__sidebar {
+  border-top: 1px solid;
+  margin-top: 0;
+  padding-top: 1em;
+  margin-bottom: 1em;
+
+  @media #{$breakpoint-md-up} {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    max-width: 450px;
+  }
+
+  p, p * {
+    font-size: 0.8rem;
+  }
+}
+
+.article__tags {
+  margin-top: 1em;
+  max-width: 450px;
+}
+
+.author__image {
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+.max-container {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-col-example {
+  min-height: calc(100vh - #{$container-pad--mobile}*2 - #{$gutter}* 2);
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.2);
+
+  @media #{$breakpoint-sm-up} {
+    min-height: calc(100vh - #{$container-pad}*2 - #{$gutter}* 2);
+  }
+}

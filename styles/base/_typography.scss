@@ -1,0 +1,50 @@
+html {
+  font-size: 18px;
+
+  @media #{$breakpoint-md-up} {
+    font-size: 22px;
+  }
+}
+
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p {
+  font-family: 'IBM Plex Serif', serif;
+}
+
+p + p {
+  padding-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-bottom: 0.5em;
+
+  &:not(:first-child) {
+    padding-top: 2.5em;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h6 {
+  text-transform: uppercase;
+}

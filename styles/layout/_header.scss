@@ -1,0 +1,140 @@
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$breakpoint-md-up} {
+      flex-direction: row;
+    }
+
+    li {
+      padding-right: $gutter*3;
+    }
+
+    a {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.menu--sticky {
+  position: sticky;
+  min-width: 100vw;
+  top: 0;
+  padding: $gutter*2 $gutter;
+  background-color: white;
+  z-index: 2;
+  display: none;
+
+  @media #{$breakpoint-md-up} {
+    display: block;
+  }
+}
+
+.menu-mobile-hamb__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 3;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+  display: none;
+
+  @media #{$breakpoint-md-up} {
+    display: none;
+  }
+
+  .menu-mobile--active & {
+    display: block;
+  }
+
+  nav {
+    height: 100%;
+  }
+
+  ul {
+    height: 100%;
+    justify-content: center;
+
+    li {
+      padding-right: 0;
+
+      a {
+        font-size: 2em;
+        font-weight: normal;
+        text-transform: initial;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.menu-mobile-hamb {
+  position: fixed;
+  top: calc(#{$container-pad--mobile} + #{$gutter});
+  right: calc(#{$container-pad--mobile} + #{$gutter});
+  width: 30px;
+  height: 20px;
+  z-index: 4;
+  transition: opacity 0.4s ease;
+  user-select: none;
+
+  @media #{$breakpoint-md-up} {
+    display: none;
+  }
+
+  .menu-mobile-hamb__el {
+    left: 0;
+    right: 0;
+    top: 0%;
+    height: 1px;
+    background-color: black;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background-color: black;
+      transform-origin: 50% 50%;
+    }
+
+    &:after {
+      top: 100%;
+    }
+  }
+
+  .menu-mobile--active & {
+    .menu-mobile-hamb__el {
+      background-color: transparent;
+
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+}

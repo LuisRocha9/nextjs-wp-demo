@@ -1,0 +1,20 @@
+/* -- Grid -- */
+$grid-columns: 12; // Set number of columns in the grid
+
+$xs-max: 640px; // 40rem
+$sm-max: 1023px; // 64rem
+$md-max: 1439px; // 90rem
+$lg-max: 1790px; // $lg-max: 1920px; // 120rem
+
+$gutter: 10px;
+
+$container-max-width: 1300px;
+$container-pad: 30px;
+$container-pad--mobile: 5px;
+
+
+/* -- Colors -- */
+// $color--grey: #E6E7E8;
+
+/* -- Z-index -- */
+// $z--slider: 1200;

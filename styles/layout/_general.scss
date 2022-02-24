@@ -1,0 +1,20 @@
+main {
+  margin-bottom: $container-pad--mobile;
+  margin-top: 60px;
+
+  @media #{$breakpoint-sm-up} {
+    margin-top: $container-pad;
+    margin-bottom: $container-pad;
+  }
+}
+
+
+body {
+  padding-left: $container-pad--mobile;
+  padding-right: $container-pad--mobile;
+
+  @media #{$breakpoint-sm-up} {
+    padding-left: $container-pad;
+    padding-right: $container-pad;
+  }
+}

@@ -1,0 +1,25 @@
+.button-tag {
+  border-radius: 15px;
+  border: 1px solid;
+  padding: 1px 15px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.65em;
+
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  &.button-tag--active {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background-color: grey;
+      color: white;
+    }
+
+  }
+}
