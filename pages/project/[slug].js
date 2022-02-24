@@ -14,7 +14,7 @@ const Project = ({project, menuItems}) => {
  return(
         <div>
           <MainMenu menuItems={menuItems}/>
-          <article>
+          {project !== undefined ? <article>
                   <div className="row">
                       <div className="col-xs-12">
                           <h1 dangerouslySetInnerHTML={{__html: project.title}}/>
@@ -27,12 +27,12 @@ const Project = ({project, menuItems}) => {
                       <div className="col-xs-12 col-md-3 col-md-offset-1">
                           <div className="article__sidebar">
                               <div className="author__image">
-                                  
-                                    {project.projectInfo.author.authorInfo.photo ? 
+
+                                    {project.projectInfo.author.authorInfo.photo ?
                                       <img src={project.projectInfo.author.authorInfo.photo.sourceUrl} alt={project.projectInfo.author.title}/> :
                                       null
                                     }
-                                  
+
                               </div>
                               <div className="author__bio">
                                   <div dangerouslySetInnerHTML={{__html: project.projectInfo.author.authorInfo.biography}}/>
@@ -51,7 +51,7 @@ const Project = ({project, menuItems}) => {
                       </div>
                   </div>
 
-              </article>
+              </article> : null}
             </div>
   )
 }

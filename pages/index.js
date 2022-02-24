@@ -17,7 +17,7 @@ export default function Home({allProjects, menuItems, categoriesAndTags}) {
     const [tags, setTags] = useState([]);
 
 
-     
+
 
     const { data, error } = useSWR([`
                          query GetProjects ($categories: [String] = "", $tags: [String] = "") {
@@ -72,7 +72,7 @@ export default function Home({allProjects, menuItems, categoriesAndTags}) {
                         }`,{categories, tags}],fetcher);
 
     console.log(categories)
-          
+
 
     return (
         <div className={styles.container}>
@@ -84,7 +84,7 @@ export default function Home({allProjects, menuItems, categoriesAndTags}) {
 
             <main className={"max-container"}>
                 <MainMenu menuItems={menuItems} />
-                <Search 
+                <Search
                             categoriesAndTags={categoriesAndTags}
                             categories={categories}
                             setCategories={setCategories}
@@ -94,7 +94,7 @@ export default function Home({allProjects, menuItems, categoriesAndTags}) {
                     <div>
                         <ProjectsList projects={data.projects} />
                     </div>
-                
+
                 }
 
             </main>
@@ -110,56 +110,3 @@ export async function getStaticProps() {
         props: { allProjects, menuItems, categoriesAndTags },
     }
 }
-
-
-const query = `{
-                         query GetProjects ($categories: [String] = "", $tags: [String] = "") {
-                          projects(
-                           where: {
-                              taxQuery: {
-                                relation: AND,
-                                taxArray: [
-                                  {
-                                    terms: $categories,
-                                    taxonomy: CATEGORY,
-                                    operator: AND,
-                                    field: SLUG
-                                  },
-                                  {
-                                    terms: $tags,
-                                    taxonomy: TAG,
-                                    operator: AND,
-                                    field: SLUG
-                                  }
-                                ]
-                              }
-                            }
-                          ) {
-                            edges {
-                              node {
-                                title
-                                date
-                                excerpt
-                                slug
-                                id
-                                featuredImage {
-                                  node {
-                                    sourceUrl
-                                  }
-                                }
-                                categories {
-                                  nodes {
-                                    categoryId
-                                    slug
-                                  }
-                                }
-                                tags {
-                                  nodes {
-                                    tagId
-                                    slug
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }`
