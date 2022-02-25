@@ -73,7 +73,6 @@ export async function getStaticPaths() {
   const allProjects = await getAllProjectsWithSlug()
 
   return {
-    paths: allProjects.edges.map(({ node }) =>`/project/${node.slug}`) || [],
-    fallback: 'blocking',
+    paths: allProjects.edges.map(({ node }) =>`/project/${node.slug}`) || []
   }
 }
