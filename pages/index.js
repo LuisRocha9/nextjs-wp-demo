@@ -108,6 +108,6 @@ export async function getStaticProps() {
     const categoriesAndTags = await getAllCategoriesAndTags();
     return {
         props: { allProjects, menuItems, categoriesAndTags },
-        revalidate: 10
+        revalidate: 1
     }
 }
