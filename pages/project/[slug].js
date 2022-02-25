@@ -65,6 +65,7 @@ export async function getStaticProps({ params }) {
       project: data,
       menuItems
     },
+    revalidate: 10
   }
 }
 
