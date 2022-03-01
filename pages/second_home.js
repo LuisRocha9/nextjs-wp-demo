@@ -8,7 +8,6 @@ const DynamicGlide = dynamic(() => import('../components/glide-component'))
 
 
 const SecondHome = ({allProjects, menuItems}) => {
-	console.log(glidejs)
 	return (
 		
 		<main className={"max-container"}>

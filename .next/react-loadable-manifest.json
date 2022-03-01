@@ -4,5 +4,11 @@
     "files": [
       "static/chunks/components_anime-component_js.js"
     ]
+  },
+  "second_home.js -> ../components/glide-component": {
+    "id": "second_home.js -> ../components/glide-component",
+    "files": [
+      "static/chunks/components_glide-component_js.js"
+    ]
   }
 }
