@@ -1,11 +1,16 @@
 import MainMenu from '../components/main-menu';
 import {getAllProjects, getMainMenu} from '../lib/api';
 import Link from 'next/link';
-import glidejs from '@glidejs/glide';
+import dynamic from 'next/dynamic';
+
+
+const DynamicGlide = dynamic(() => import('../components/glide-component'))
+
 
 const SecondHome = ({allProjects, menuItems}) => {
 	console.log(glidejs)
 	return (
+		<DynamicGlide />
 		<main className={"max-container"}>
 			<MainMenu menuItems={menuItems} />
 			<div className="row thumbnails">

@@ -4,11 +4,5 @@
     "files": [
       "static/chunks/components_anime-component_js.js"
     ]
-  },
-  "index.js -> ../components/glide-component": {
-    "id": "index.js -> ../components/glide-component",
-    "files": [
-      "static/chunks/components_glide-component_js.js"
-    ]
   }
 }
