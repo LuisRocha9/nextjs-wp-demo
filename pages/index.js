@@ -9,7 +9,7 @@ import { request } from 'graphql-request';
 import {useState , useEffect} from 'react';
 import useSWR from "swr";
 import glidejs from '@glidejs/glide';
-
+import anime from 'animejs/lib/anime.es.js';
 
 const fetcher = (query, variables) => request('https://next-js-wordpress.previews.mariaadelaide.com/graphql', query, variables);
 

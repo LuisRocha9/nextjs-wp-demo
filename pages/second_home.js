@@ -2,7 +2,7 @@ import MainMenu from '../components/main-menu';
 import {getAllProjects, getMainMenu} from '../lib/api';
 import Link from 'next/link';
 import glidejs from '@glidejs/glide';
-
+import anime from 'animejs/lib/anime.es.js';
 
 const SecondHome = ({allProjects, menuItems}) => {
 	console.log(glidejs)
