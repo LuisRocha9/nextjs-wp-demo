@@ -13,6 +13,9 @@ export default function MainMenu ({menuItems}) {
                     </li>
                     ))
                 }
+                <li>
+                        <Link href="/second_home">Second Home</Link>
+                </li>
             </ul>
         </nav>
     )

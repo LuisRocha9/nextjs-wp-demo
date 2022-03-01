@@ -2,7 +2,6 @@ const Search = ({categoriesAndTags, setCategories, setTags, categories, tags}) =
 
 	var updatedArray = [];
 
-	console.log(categoriesAndTags)
 	return (
 		<form>
 		<div className="row"> 
