@@ -8,6 +8,8 @@ import {getAllProjects, getMainMenu, getAllCategoriesAndTags } from '../lib/api'
 import { request } from 'graphql-request';
 import {useState , useEffect} from 'react';
 import useSWR from "swr";
+import glidejs from '@glidejs/glide';
+
 
 const fetcher = (query, variables) => request('https://next-js-wordpress.previews.mariaadelaide.com/graphql', query, variables);
 
