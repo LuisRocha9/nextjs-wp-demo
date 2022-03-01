@@ -13,7 +13,7 @@ const SecondHome = ({allProjects, menuItems}) => {
 		
 		<main className={"max-container"}>
 		<DynamicGlide />
-		            <DynamicAnime />
+		<DynamicAnime />
 
 			<MainMenu menuItems={menuItems} />
 			<div className="row thumbnails">
