@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 
 
 const DynamicGlide = dynamic(() => import('../components/glide-component'))
+const DynamicAnime = dynamic(() => import('../components/anime-component'))
 
 
 const SecondHome = ({allProjects, menuItems}) => {
@@ -12,6 +13,8 @@ const SecondHome = ({allProjects, menuItems}) => {
 		
 		<main className={"max-container"}>
 		<DynamicGlide />
+		            <DynamicAnime />
+
 			<MainMenu menuItems={menuItems} />
 			<div className="row thumbnails">
 				{allProjects.edges.map(({node}) => (
