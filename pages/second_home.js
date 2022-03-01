@@ -10,8 +10,9 @@ const DynamicGlide = dynamic(() => import('../components/glide-component'))
 const SecondHome = ({allProjects, menuItems}) => {
 	console.log(glidejs)
 	return (
-		<DynamicGlide />
+		
 		<main className={"max-container"}>
+		<DynamicGlide />
 			<MainMenu menuItems={menuItems} />
 			<div className="row thumbnails">
 				{allProjects.edges.map(({node}) => (
